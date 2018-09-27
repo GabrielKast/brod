@@ -53,7 +53,7 @@
 -define(REJOIN_DELAY_SECONDS, 1).
 -define(OFFSET_COMMIT_POLICY, commit_to_kafka_v2).
 -define(OFFSET_COMMIT_INTERVAL_SECONDS, 5).
-%% use kfaka's offset meta-topic retention policy
+%% use kafka's offset meta-topic retention policy
 -define(OFFSET_RETENTION_DEFAULT, -1).
 
 -define(ESCALATE_EC(EC), ?IS_ERROR(EC) andalso erlang:throw(EC)).
@@ -175,7 +175,7 @@
 %%           the members to realise status changes of the group such as
 %%           assignment rebalacing or group coordinator switchover etc.
 %%  - max_rejoin_attempts (optional, default = 5)
-%%      Maximum number of times allowd for a member to re-join the group.
+%%      Maximum number of times allowed for a member to re-join the group.
 %%      The gen_server will stop if it reached the maximum number of retries.
 %%      OBS: 'let it crash' may not be the optimal strategy here because
 %%           the group member id is kept in the gen_server looping state and
