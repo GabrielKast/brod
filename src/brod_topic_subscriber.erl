@@ -146,7 +146,7 @@ start_link(Client, Topic, Partitions, ConsumerConfig,
 %% partitions. Messages are handled by calling the callback function.
 %%
 %% NOTE: CommittedOffsets are the offsets for the messages that are successfully
-%%       processed (acknoledged), not the begin-offset ot start fetching from.
+%%       processed (acknoledged), not the begin-offset to start fetching from.
 -spec start_link(brod:client(), brod:topic(), all | [brod:partition()],
                  brod:consumer_config(), committed_offsets(),
                  message | message_set, cb_fun(), cb_state()) ->
